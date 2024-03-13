@@ -54,6 +54,7 @@ class Register extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 33,
                                       color:Color(0xFFD77E15),
+                                      fontWeight: FontWeight.bold,
                                     ),
                                     //style: SecondaryTextGrayStyle(),
                                   ),
