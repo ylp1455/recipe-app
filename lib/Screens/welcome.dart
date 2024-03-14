@@ -3,10 +3,11 @@ import 'package:recipiapp/components/textcomp.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
-  State<Welcome> createState() => _loginScreenState();
+
+  State<Welcome> createState() => _WelcomeScreenState();
 }
 
-class _loginScreenState extends State<Welcome> {
+class _WelcomeScreenState extends State<Welcome> {
   late bool _passwordVisible;
 
   @override
@@ -35,7 +36,14 @@ class _loginScreenState extends State<Welcome> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFF444141),
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFF444141), // #444141
+                          Color(0xFF1D1C1C), // #1D1C1C
+                        ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                      ),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(25),
                         topRight: Radius.circular(25.0),
@@ -52,11 +60,11 @@ class _loginScreenState extends State<Welcome> {
                                 children: [
                                   Text(
                                     "Welcome",
-                                    style:TextStyle(
-                                      fontFamily:'Poppins',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
                                       fontSize: 40,
-                                      color:Color(0xFFFFFFFF),
-                                      fontWeight: FontWeight.bold
+                                      color: Color(0xFFFFFFFF),
+                                      fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                 ],
@@ -67,10 +75,10 @@ class _loginScreenState extends State<Welcome> {
                                   Text(
                                     "Time to cook, Let’s Sign in",
                                     style: TextStyle(
-                                      fontSize: 16,
-                                      color:Color(0xFFFFFFFF),
-                                      fontFamily:'Poppins',
-                                    ),
+                                        fontSize: 16,
+                                        color: Color(0xFFFFFFFF),
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w400),
                                     //style: SecondaryTextGrayStyle(),
                                   ),
                                 ],
@@ -80,69 +88,58 @@ class _loginScreenState extends State<Welcome> {
                               ),
                               Column(
                                 children: [
-                                  TextField(
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(20.0),
-                                      ),
-                                      filled: true,
-                                      hintStyle: TextStyle(
-                                        color: Color(0xFF000000),
-                                        fontFamily:'Poppins',),
-                                      hintText: "Email",
-                                      fillColor: Color(0xFFDCCDBC),
-                                    ),
-                                  ),
+                                 TextField(
+                                   decoration: PrimaryTextComponent(
+                                     MyHintText: "Email"
+                                   ),
+                                 ),
                                   SizedBox(
                                     height: 10,
                                   ),
                                   TextField(
                                     obscureText: !_passwordVisible,
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(20.0),
-                                      ),
-                                      filled: true,
-                                      hintStyle: TextStyle(color: Color(0xFF000000),
-                                          fontFamily:'Poppins'
-                                      ),
-                                      hintText: "Password",
-                                      fillColor: Color(0xFFDCCDBC),
+                                    decoration: PrimaryTextComponent(
+                                        MyHintText: "Password"
                                     ),
                                   ),
                                   SizedBox(
                                     height: 15,
                                   ),
                                   InkWell(
-                                    onTap: (){
+                                    onTap: () {
                                       print("Text clicked");
                                     },
-                                    child: Text("Forgot Password?",style: TextStyle(
-                                      fontSize: 16,
-                                      color: Colors.grey,
-                                    ),
+                                    child: Text(
+                                      "Forgot Password?",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.grey,
+                                      ),
                                     ),
                                   ),
                                   SizedBox(
                                     height: 15,
                                   ),
                                   Container(
-                                    height: 50,
-                                    width: 179,
+                                    height: 49,
+                                    width: 186,
                                     decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(25),
-                                        color: Color(0xFFD77E15)
-                                    ),
-                                    child:Center(child: TextButton(
-                                      onPressed: (){},
-                                      child: Text("Sign In",style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                        fontFamily:'Poppins',
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: Color(0xFFD77E15)),
+                                    child: Center(
+                                      child: TextButton(
+                                        onPressed: () {},
+                                        child: Text(
+                                          "Sign In",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.white,
+                                            fontFamily: 'Poppins',
+                                          ),
+                                        ),
                                       ),
-                                      ),
                                     ),
-                                    ) ,
                                   ),
                                   SizedBox(
                                     height: 15,
@@ -150,23 +147,30 @@ class _loginScreenState extends State<Welcome> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text("First time here?",style: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily:'Poppins',
-                                        color: Colors.white,
-                                      ),
+                                      Text(
+                                        "First time here?",
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                       InkWell(
-                                        onTap: (){
+                                        onTap: () {
                                           print("signup pressed");
                                         },
-                                        child: Text(" Sign Up",style: TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.white,
-                                          fontFamily:'Poppins',
-                                          decoration: TextDecoration.underline,
-                                          decorationColor: Colors.white,
-                                        ),
+                                        child: Text(
+                                          " Sign Up",
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            color: Colors.white,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w400,
+                                            decoration:
+                                                TextDecoration.underline,
+                                            decorationColor: Colors.white,
+                                          ),
                                         ),
                                       ),
                                     ],

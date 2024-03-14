@@ -7,14 +7,14 @@ InputDecoration PrimaryTextComponent({
     hintText: MyHintText,
     fillColor: Color(0xFFDCCDBC),
     filled: true,
-    enabledBorder: OutlineInputBorder(
+    border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(20.0),
     ),
     hintStyle: TextStyle(
-      color: Colors.black, // Example color
-      fontSize: 15.0, // Example font size
+      color: Color(0xFF000000),
+      fontFamily: 'Poppins',
       fontWeight: FontWeight.w400,
-      fontFamily:'Poppins',// Example font weight
+      fontSize: 15,
     ),
   );
 }

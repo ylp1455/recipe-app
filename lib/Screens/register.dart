@@ -23,7 +23,14 @@ class Register extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFF444141),
+                      gradient: LinearGradient(
+                        colors: [
+                          Color(0xFF444141), // #444141
+                          Color(0xFF1D1C1C), // #1D1C1C
+                        ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                      ),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(25),
                         topRight: Radius.circular(25.0),
@@ -42,6 +49,7 @@ class Register extends StatelessWidget {
                                     style:TextStyle(
                                       fontFamily:'Poppins',
                                       fontSize: 29,
+                                      fontWeight: FontWeight.w500,
                                       color:Color(0xFFD77E15),
                                     ),
                                   ),
@@ -55,6 +63,7 @@ class Register extends StatelessWidget {
                                       fontSize: 33,
                                       color:Color(0xFFD77E15),
                                       fontWeight: FontWeight.bold,
+                                      fontFamily:'Poppins',
                                     ),
                                     //style: SecondaryTextGrayStyle(),
                                   ),
@@ -67,7 +76,7 @@ class Register extends StatelessWidget {
                                 height: 50,
                                 width: 179,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
+                                    borderRadius: BorderRadius.circular(20),
                                     color: Color(0xFFD77E15)
                                 ),
                                 child:Center(child: TextButton(
@@ -76,6 +85,7 @@ class Register extends StatelessWidget {
                                     fontSize: 20,
                                     color: Colors.white,
                                     fontFamily:'Poppins',
+                                    fontWeight: FontWeight.w600
                                   ),
                                   ),
                                 ),
@@ -88,7 +98,7 @@ class Register extends StatelessWidget {
                                 height: 50,
                                 width: 179,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
+                                    borderRadius: BorderRadius.circular(20),
                                     color: Color(0xFFFFFFFF)
                                 ),
                                 child:Center(child: TextButton(
@@ -97,6 +107,7 @@ class Register extends StatelessWidget {
                                     fontSize: 20,
                                     color: Color(0xFFD77E15),
                                     fontFamily:'Poppins',
+                                      fontWeight: FontWeight.w600,
                                   ),
                                   ),
                                 ),
