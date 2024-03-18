@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipiapp/components/textcomp.dart';
+import 'package:recipiapp/components/textstyle.dart';
 
 class CreateAccount extends StatefulWidget {
   const CreateAccount({super.key});
@@ -124,8 +125,7 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                         height: 15,
                                       ),
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           Checkbox(
                                             value: isChecked,
@@ -169,19 +169,55 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                               fontWeight: FontWeight.w400,
                                             ),
                                           ),
-                                        ],
+                                        //   RichText(
+                                        //     text: TextSpan(
+                                        //       text: 'I ',
+                                        //       children: const <TextSpan>[
+                                        //         TextSpan(text: 'agree to the', style: TextStyle(
+                                        //                 fontSize: 15,
+                                        //                 color: Colors.white,
+                                        //                 fontFamily: 'Poppins',
+                                        //                 fontWeight: FontWeight.w400,
+                                        //               ),
+                                        //         ),
+                                        //         TextSpan(text: ' Terms  & Condition ',style: TextStyle(
+                                        //           fontSize: 15,
+                                        //          color: Color(0xFF1976D2),
+                                        //           fontFamily: 'Poppins',
+                                        //           fontWeight: FontWeight.w400,
+                                        //         ),
+                                        //         ),
+                                        //         TextSpan(text: 'and', style: TextStyle(
+                                        //           fontSize: 15,
+                                        //           color: Colors.white,
+                                        //           fontFamily: 'Poppins',
+                                        //           fontWeight: FontWeight.w400,
+                                        //         ),
+                                        //         ),
+                                        //       ],
+                                        //     ),
+                                        //   )
+                                         ],
                                       ),
-                                      Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
+                                      Row(
                                         children: [
-                                          Text(
-                                            "Privacy Policy",
-                                            style: TextStyle(
-                                              fontSize: 15,
-                                              color: Color(0xFFD77E15),
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w400,
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 55
+                                            ),
+                                            child: InkWell(
+                                              onTap: (){
+                                                print("Privacy clicked");
+                                              },
+                                              child: Text(
+                                                "Privacy Policy",
+                                                style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Color(0xFFD77E15),
+                                                  fontFamily: 'Poppins',
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
                                             ),
                                           ),
                                         ],

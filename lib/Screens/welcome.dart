@@ -23,7 +23,7 @@ class _WelcomeScreenState extends State<Welcome> {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height ,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('images/Regimg.png'),
