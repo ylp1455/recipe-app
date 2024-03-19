@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:recipiapp/components/textcomp.dart';
-import 'package:recipiapp/components/textstyle.dart';
-
-class CreateAccount extends StatefulWidget {
-  const CreateAccount({super.key});
-
-  State<CreateAccount> createState() => _WelcomeScreenState();
-}
-
-class _WelcomeScreenState extends State<CreateAccount> {
-  late bool _passwordVisible;
-  bool? isChecked = true;
+class CreatePassword extends StatefulWidget {
+  const CreatePassword({super.key});
 
   @override
+  State<CreatePassword> createState() => _CreatePasswordState();
+}
+
+class _CreatePasswordState extends State<CreatePassword> {
+  late bool _passwordVisible;
+
   void initState() {
     _passwordVisible = false;
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,35 +30,37 @@ class _WelcomeScreenState extends State<CreateAccount> {
                       top: 50,
                       left: 25,
                     ),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              "Create",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 36,
-                                fontFamily: 'Poppins',
-                                color: Color(0xFFFFFFFF),
+                    child: Expanded(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "Create",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 36,
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFFFFFFF),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "Your Account",
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 36,
-                                fontFamily: 'Poppins',
-                                color: Color(0xFFFFFFFF),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "New Password",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 36,
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFFFFFFF),
+                                ),
                               ),
-                            ),
-                          ],
-                        )
-                      ],
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Column(
@@ -95,20 +93,6 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                   Column(
                                     children: [
                                       TextField(
-                                        decoration: PrimaryTextComponent(
-                                            MyHintText: "Name"),
-                                      ),
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      TextField(
-                                        decoration: PrimaryTextComponent(
-                                            MyHintText: "Email"),
-                                      ),
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      TextField(
                                         obscureText: !_passwordVisible,
                                         decoration: PrimaryTextComponent(
                                             MyHintText: "Password"),
@@ -127,16 +111,6 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Checkbox(
-                                            value: isChecked,
-                                            checkColor: Colors.black,
-                                            activeColor: Colors.white,
-                                            onChanged: (bool? value) {
-                                              setState(() {
-                                                isChecked = value;
-                                              });
-                                            },
-                                          ),
                                           Text(
                                             "I agree to the",
                                             style: TextStyle(
@@ -169,41 +143,13 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                               fontWeight: FontWeight.w400,
                                             ),
                                           ),
-                                        //   RichText(
-                                        //     text: TextSpan(
-                                        //       text: 'I ',
-                                        //       children: const <TextSpan>[
-                                        //         TextSpan(text: 'agree to the', style: TextStyle(
-                                        //                 fontSize: 15,
-                                        //                 color: Colors.white,
-                                        //                 fontFamily: 'Poppins',
-                                        //                 fontWeight: FontWeight.w400,
-                                        //               ),
-                                        //         ),
-                                        //         TextSpan(text: ' Terms  & Condition ',style: TextStyle(
-                                        //           fontSize: 15,
-                                        //          color: Color(0xFF1976D2),
-                                        //           fontFamily: 'Poppins',
-                                        //           fontWeight: FontWeight.w400,
-                                        //         ),
-                                        //         ),
-                                        //         TextSpan(text: 'and', style: TextStyle(
-                                        //           fontSize: 15,
-                                        //           color: Colors.white,
-                                        //           fontFamily: 'Poppins',
-                                        //           fontWeight: FontWeight.w400,
-                                        //         ),
-                                        //         ),
-                                        //       ],
-                                        //     ),
-                                        //   )
-                                         ],
+                                        ],
                                       ),
                                       Row(
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                              left: 55
+                                                left: 55
                                             ),
                                             child: InkWell(
                                               onTap: (){
@@ -232,7 +178,7 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                             width: 307,
                                             decoration: BoxDecoration(
                                                 borderRadius:
-                                                    BorderRadius.circular(20),
+                                                BorderRadius.circular(20),
                                                 color: Color(0xFFD77E15)),
                                             child: Center(
                                               child: TextButton(
@@ -252,40 +198,6 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                           SizedBox(
                                             height: 10,
                                           ),
-                                          Container(
-                                            height: 51,
-                                            width: 307,
-                                            decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                                color: Color(0xFFD77E15)),
-                                            child: Center(
-                                              child: Row(
-                                                children: [
-                                                  Padding(
-                                                    padding: EdgeInsets.only(
-                                                        top: 5, left: 20),
-                                                    child: Image(
-                                                        image: AssetImage(
-                                                            "images/google.png")),
-                                                  ),
-                                                  TextButton(
-                                                    onPressed: () {},
-                                                    child: Text(
-                                                      "Sign Up with Google",
-                                                      style: TextStyle(
-                                                        fontSize: 20,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: Colors.white,
-                                                        fontFamily: 'Poppins',
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
                                         ],
                                       ),
                                       SizedBox(
@@ -293,7 +205,7 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                       ),
                                       Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        MainAxisAlignment.center,
                                         children: [
                                           Text(
                                             "Already have an Account?",
@@ -302,23 +214,6 @@ class _WelcomeScreenState extends State<CreateAccount> {
                                               fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w400,
                                               color: Colors.white,
-                                            ),
-                                          ),
-                                          InkWell(
-                                            onTap: () {
-                                              print("signin pressed");
-                                            },
-                                            child: Text(
-                                              " Sign In",
-                                              style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w400,
-                                                decoration:
-                                                    TextDecoration.underline,
-                                                decorationColor: Colors.white,
-                                              ),
                                             ),
                                           ),
                                         ],
