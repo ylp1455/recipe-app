@@ -76,224 +76,230 @@ class _CreateAccounttState extends State<CreateAccountt> {
                         topRight: Radius.circular(25.0),
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(25.0),
-                      child: Column(
-                        children: [
-                          Column(
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(25.0),
+                          child: Column(
                             children: [
+                              TextField(
+                                decoration: PrimaryTextComponent(
+                                    MyHintText: "Name"),
+                              ),
                               SizedBox(
                                 height: 10,
                               ),
-                              Column(
+                              TextField(
+                                decoration: PrimaryTextComponent(
+                                    MyHintText: "Email"),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TextField(
+                                obscureText: !_passwordVisible,
+                                decoration: PrimaryTextComponent(
+                                    MyHintText: "Password"),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TextField(
+                                obscureText: !_passwordVisible,
+                                decoration: PrimaryTextComponent(
+                                    MyHintText: "Confirm Password"),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 20,
+                                  right: 20,
+                              ),
+                              child: Row(
+                                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  TextField(
-                                    decoration: PrimaryTextComponent(
-                                        MyHintText: "Name"),
+                                  Checkbox(
+                                    value: isChecked,
+                                    checkColor: Colors.black,
+                                    activeColor: Colors.white,
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        isChecked = value;
+                                      });
+                                    },
                                   ),
-                                  SizedBox(
-                                    height: 10,
+                                  Text(
+                                    "I agree to the ",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.w400,
+                                    ),
                                   ),
-                                  TextField(
-                                    decoration: PrimaryTextComponent(
-                                        MyHintText: "Email"),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  TextField(
-                                    obscureText: !_passwordVisible,
-                                    decoration: PrimaryTextComponent(
-                                        MyHintText: "Password"),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  TextField(
-                                    obscureText: !_passwordVisible,
-                                    decoration: PrimaryTextComponent(
-                                        MyHintText: "Confirm Password"),
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Checkbox(
-                                        value: isChecked,
-                                        checkColor: Colors.black,
-                                        activeColor: Colors.white,
-                                        onChanged: (bool? value) {
-                                          setState(() {
-                                            isChecked = value;
-                                          });
-                                        },
+                                  InkWell(
+                                    onTap: () {
+                                      print("terms clicked");
+                                    },
+                                    child: Text(
+                                      "Terms  & Condition ",
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color(0xFF1976D2),
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w400,
                                       ),
-                                      Text(
-                                        "I agree to the",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.white,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                      InkWell(
-                                        onTap: () {
-                                          print("terms clicked");
-                                        },
-                                        child: Text(
-                                          "Terms  & Condition",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            color: Color(0xFF1976D2),
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        "and",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          color: Color(0xFFFFFFFF),
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
+                                    ),
                                   ),
-                                  Row(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 55
-                                        ),
-                                        child: InkWell(
-                                          onTap: (){
-                                            print("Privacy clicked");
-                                          },
-                                          child: Text(
-                                            "Privacy Policy",
-                                            style: TextStyle(
-                                              fontSize: 15,
-                                              color: Color(0xFFD77E15),
-                                              fontFamily: 'Poppins',
-                                              fontWeight: FontWeight.w400,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Column(
-                                    children: [
-                                      Container(
-                                        height: 51,
-                                        width: 307,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                            BorderRadius.circular(20),
-                                            color: Color(0xFFD77E15)),
-                                        child: Center(
-                                          child: TextButton(
-                                            onPressed: () {},
-                                            child: Text(
-                                              "Create Account",
-                                              style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.white,
-                                                fontFamily: 'Poppins',
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      Container(
-                                        height: 51,
-                                        width: 307,
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                            BorderRadius.circular(20),
-                                            color: Color(0xFFD77E15)),
-                                        child: Center(
-                                          child: Row(
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsets.only(
-                                                    top: 5, left: 20),
-                                                child: Image(
-                                                    image: AssetImage(
-                                                        "images/google.png")),
-                                              ),
-                                              TextButton(
-                                                onPressed: () {},
-                                                child: Text(
-                                                  "Sign Up with Google",
-                                                  style: TextStyle(
-                                                    fontSize: 20,
-                                                    fontWeight:
-                                                    FontWeight.w600,
-                                                    color: Colors.white,
-                                                    fontFamily: 'Poppins',
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                    MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Already have an Account?",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      InkWell(
-                                        onTap: () {
-                                          print("signin pressed");
-                                        },
-                                        child: Text(
-                                          " Sign In",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            color: Colors.white,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                            decoration:
-                                            TextDecoration.underline,
-                                            decorationColor: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                                  Text(
+                                    "and",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      color: Color(0xFFFFFFFF),
+                                      fontFamily: 'Poppins',
+                                      fontWeight: FontWeight.w400,
+                                    ),
                                   ),
                                 ],
                               ),
+                            ),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 65
+                                  ),
+                                  child: InkWell(
+                                    onTap: (){
+                                      print("Privacy clicked");
+                                    },
+                                    child: Text(
+                                      "Privacy Policy",
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color(0xFFD77E15),
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(25.0),
+                          child: Column(
+                            children: [
+                              Container(
+                                height: 51,
+                                width: 307,
+                                decoration: BoxDecoration(
+                                    borderRadius:
+                                    BorderRadius.circular(20),
+                                    color: Color(0xFFD77E15)),
+                                child: Center(
+                                  child: TextButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      "Create Account",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.white,
+                                        fontFamily: 'Poppins',
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                height: 51,
+                                width: 307,
+                                decoration: BoxDecoration(
+                                    borderRadius:
+                                    BorderRadius.circular(20),
+                                    color: Color(0xFFD77E15)),
+                                child: Center(
+                                  child: Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            top: 5, left: 20),
+                                        child: Image(
+                                            image: AssetImage(
+                                                "images/google.png")),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {},
+                                        child: Text(
+                                          "Sign Up with Google",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight:
+                                            FontWeight.w600,
+                                            color: Colors.white,
+                                            fontFamily: 'Poppins',
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ],
-                          )
-                        ],
-                      ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            left: 25,
+                            right: 25,
+                          ),
+                          child: Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Already have an Account?",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  print("signin pressed");
+                                },
+                                child: Text(
+                                  " Sign In",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w400,
+                                    decoration:
+                                    TextDecoration.underline,
+                                    decorationColor: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
