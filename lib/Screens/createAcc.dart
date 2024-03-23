@@ -33,46 +33,46 @@ class _CreateAccounttState extends State<CreateAccountt> {
 
     return Scaffold(
       resizeToAvoidBottomInset : false,
-      body: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Color(0xFFD77E15),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.all(25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Create",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      color: Color(0xFFFFFFFF),
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color(0xFFD77E15),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.all(25),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Create",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
-                  ),
-                  Text(
-                    "Your Account",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      color: Color(0xFFFFFFFF),
+                    Text(
+                      "Your Account",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            SingleChildScrollView(
-              child: Container(
+              SizedBox(
+                height: 20,
+              ),
+              Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -260,9 +260,9 @@ class _CreateAccounttState extends State<CreateAccountt> {
                     ],
                   ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

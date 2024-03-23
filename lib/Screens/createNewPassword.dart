@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:recipiapp/components/textcomp.dart';
 class CreatePassword extends StatefulWidget {
@@ -65,7 +66,7 @@ class _CreatePasswordState extends State<CreatePassword> {
             SizedBox(
               height: 20,
             ),
-            SingleChildScrollView(
+            Expanded(
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -88,20 +89,6 @@ class _CreatePasswordState extends State<CreatePassword> {
                       Container(
                         child: Column(children: [
                           TextField(
-                            decoration: PrimaryTextComponent(
-                                MyHintText: "Name"),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          TextField(
-                            decoration: PrimaryTextComponent(
-                                MyHintText: "Email"),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          TextField(
                             obscureText: !_passwordVisible,
                             decoration: PrimaryTextComponent(
                                 MyHintText: "Password"),
@@ -115,40 +102,6 @@ class _CreatePasswordState extends State<CreatePassword> {
                                 MyHintText: "Confirm Password"),
                           ),
                         ]),
-                      ),
-                      Container(
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                RichText(
-                                  text: TextSpan(
-                                    children: const <TextSpan>[
-                                      TextSpan(
-                                        text: 'I agree to the ',
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          color: Colors.white,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: 'Terms & Condition',
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          color: Color(0xFF1976D2),
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
                       ),
                       Column(
                         children: [
