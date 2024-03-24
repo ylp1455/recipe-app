@@ -73,6 +73,7 @@ class _CreateAccounttState extends State<CreateAccountt> {
                 height: 20,
               ),
               Container(
+                height: screenHeight,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -122,6 +123,7 @@ class _CreateAccounttState extends State<CreateAccountt> {
                           ),
                         ]),
                       ),
+                      SizedBox(height: 5,),
                       Container(
                         child: Column(
                           children: [
@@ -163,9 +165,30 @@ class _CreateAccounttState extends State<CreateAccountt> {
                                 ),
                               ],
                             ),
+                            // Row(
+                            //   mainAxisAlignment:MainAxisAlignment.start ,
+                            //   children: [
+                            //     RichText(
+                            //       text: TextSpan(
+                            //         children: const <TextSpan>[
+                            //           TextSpan(
+                            //             text: 'Privacy Policy',
+                            //             style: TextStyle(
+                            //               fontSize: 15,
+                            //               color: Color(0xFFD77E15),
+                            //               fontFamily: 'Poppins',
+                            //               fontWeight: FontWeight.w400,
+                            //             ),
+                            //           ),
+                            //         ],
+                            //       ),
+                            //     ),
+                            //   ],
+                            // ),
                           ],
                         ),
                       ),
+                      SizedBox(height: 15,),
                       Column(
                         children: [
                           Container(
@@ -223,7 +246,7 @@ class _CreateAccounttState extends State<CreateAccountt> {
                             ),
                           ),
                           SizedBox(
-                            height: 25,
+                            height: 20,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

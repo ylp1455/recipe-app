@@ -28,46 +28,47 @@ class _CreatePasswordState extends State<CreatePassword> {
         .height;
     return Scaffold(
       resizeToAvoidBottomInset : false,
-      body: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Color(0xFFD77E15),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.all(25),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Create",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      color: Color(0xFFFFFFFF),
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color(0xFFD77E15),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.all(25),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Create",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
-                  ),
-                  Text(
-                    "Your Account",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      color: Color(0xFFFFFFFF),
+                    Text(
+                      "Your Account",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        color: Color(0xFFFFFFFF),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Expanded(
-              child: Container(
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: screenHeight,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
@@ -86,6 +87,32 @@ class _CreatePasswordState extends State<CreatePassword> {
                   padding: EdgeInsets.all(25),
                   child: Column(
                     children: [
+                      SizedBox(height: 45,),
+                      RichText(
+                        text: TextSpan(
+                          children: const <TextSpan>[
+                            TextSpan(
+                              text: 'Your new password must be ',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'different from previous password',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 50,),
                       Container(
                         child: Column(children: [
                           TextField(
@@ -94,7 +121,7 @@ class _CreatePasswordState extends State<CreatePassword> {
                                 MyHintText: "Password"),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 20,
                           ),
                           TextField(
                             obscureText: !_passwordVisible,
@@ -103,103 +130,34 @@ class _CreatePasswordState extends State<CreatePassword> {
                           ),
                         ]),
                       ),
-                      Column(
-                        children: [
-                          Container(
-                            height: screenHeight * 0.08, // Adjusted height
-                            width: screenWidth * 0.8, // Adjusted width
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Color(0xFFD77E15)),
-                            child: Center(
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "Create Account",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white,
-                                    fontFamily: 'Poppins',
-                                  ),
-                                ),
+                      SizedBox(height: 45,),
+                      Container(
+                        height: screenHeight * 0.08, // Adjusted height
+                        width: 230, // Adjusted width
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Color(0xFFD77E15)),
+                        child: Center(
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Reset Password",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 15,
-                          ),
-                          Container(
-                            height: screenHeight * 0.08, // Adjusted height
-                            width: screenWidth * 0.8, // Adjusted width
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Color(0xFFD77E15)),
-                            child: Center(
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 5, left: 20),
-                                    child: Image(
-                                        image: AssetImage("images/google.png")),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Sign Up with Google",
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white,
-                                        fontFamily: 'Poppins',
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 25,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Already have an Account?",
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  print("signin pressed");
-                                },
-                                child: Text(
-                                  " Sign In",
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w400,
-                                    decoration: TextDecoration.underline,
-                                    decorationColor: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                        ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
