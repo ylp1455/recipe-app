@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipiapp/components/bottomNavigation.dart';
 class Settings extends StatelessWidget {
   const Settings({super.key});
 
@@ -7,6 +8,7 @@ class Settings extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      bottomNavigationBar: SizedBox(height:70,child: BottomMainNavigationBar()),
       appBar: AppBar(
         toolbarHeight: 86,
         backgroundColor:Color(0xFFD77E15),
