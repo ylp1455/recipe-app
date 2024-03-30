@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatelessWidget {
@@ -15,7 +16,9 @@ class Register extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage('images/Regimg.png'),
                   fit: BoxFit.cover,
-                  alignment: Alignment(0, 1.2),
+                  //alignment: Alignment(0, 1.2),
+                  scale: 2
+
                 ),
               ),
               child: Column(

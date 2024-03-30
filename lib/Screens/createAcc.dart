@@ -22,15 +22,8 @@ class _CreateAccounttState extends State<CreateAccountt> {
   @override
   Widget build(BuildContext context) {
     // Get screen dimensions
-    double screenWidth = MediaQuery
-        .of(context)
-        .size
-        .width;
-    double screenHeight = MediaQuery
-        .of(context)
-        .size
-        .height;
-
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       resizeToAvoidBottomInset : false,
       body: SingleChildScrollView(
@@ -168,19 +161,23 @@ class _CreateAccounttState extends State<CreateAccountt> {
                             // Row(
                             //   mainAxisAlignment:MainAxisAlignment.start ,
                             //   children: [
-                            //     RichText(
-                            //       text: TextSpan(
-                            //         children: const <TextSpan>[
-                            //           TextSpan(
-                            //             text: 'Privacy Policy',
-                            //             style: TextStyle(
-                            //               fontSize: 15,
-                            //               color: Color(0xFFD77E15),
-                            //               fontFamily: 'Poppins',
-                            //               fontWeight: FontWeight.w400,
+                            //     Padding(
+                            //       padding: const EdgeInsets.only(
+                            //           left: 48),
+                            //       child: RichText(
+                            //         text: TextSpan(
+                            //           children: const <TextSpan>[
+                            //             TextSpan(
+                            //               text: 'Privacy Policy',
+                            //               style: TextStyle(
+                            //                 fontSize: 15,
+                            //                 color: Color(0xFFD77E15),
+                            //                 fontFamily: 'Poppins',
+                            //                 fontWeight: FontWeight.w400,
+                            //               ),
                             //             ),
-                            //           ),
-                            //         ],
+                            //           ],
+                            //         ),
                             //       ),
                             //     ),
                             //   ],
