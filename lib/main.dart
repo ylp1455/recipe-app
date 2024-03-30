@@ -10,6 +10,6 @@ import 'package:recipiapp/Screens/welcome.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home:Food(),
+    home:Home(),
   ));
 }
