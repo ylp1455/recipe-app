@@ -81,28 +81,72 @@ class Food extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                      //  Image(image: AssetImage("images/food.png"),),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text("Ingredients",style: GoogleFonts.inter(
-                              textStyle: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              )
-                            ),),
-                          ],
-                        ),
-                        Text("Atta Flour (Chapati Flour): 2 cups. This whole wheat flour is key for roti. Do not substitute with regular all-purpose flo"
+                        Text("Ingredients",style: GoogleFonts.inter(
+                          textStyle: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          )
+                        ),),
+                        Text("1. Atta Flour (Chapati Flour): 2 cups. This whole wheat flour is key for roti. Do not substitute with regular all-purpose flo"
                           ,style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             fontFamily: "Poppins",
                           ),
                         ),
-                        Text("Warm Water: About 1 cup add pleasess"
+                        Text("2. Warm Water: About 1 cup add pleasess"
+                          ,style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                        Text("3. Warm Water please"
+                          ,style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xFFD9D9D9),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(25.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Instructions",style: GoogleFonts.inter(
+                            textStyle: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            )
+                        ),),
+                        Text("1. Make the Dough: Combine atta flour and salt in a large bowl. Slowly add warm water while kneading the dough. Start with about 3/4 cup water and add small amounts until a soft, pliable dough forms. It should not"
+                          ,style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                        Text("2. Warm Water: About 1 cup add pleasess"
+                          ,style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                        Text("3. Warm Water please"
                           ,style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
