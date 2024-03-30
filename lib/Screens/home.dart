@@ -106,7 +106,7 @@ class Home extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
+                              Text(name,style:GoogleFonts.inter(
                                 textStyle: TextStyle(
                                   color: Colors.black,
                                   fontSize: 14,
@@ -115,7 +115,7 @@ class Home extends StatelessWidget {
                                 ),
                               ) ,
                               ),
-                              Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
+                              Text(subText,style:GoogleFonts.inter(
                                 textStyle: TextStyle(
                                   color: Colors.black,
                                   fontSize: 11,
@@ -130,7 +130,7 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 0.2,),
-                    Image(image: AssetImage("images/containImg.png")
+                    Image(image: AssetImage(imgPath)
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
@@ -138,7 +138,7 @@ class Home extends StatelessWidget {
                         right: 6,
                         top: 4,
                       ),
-                      child: Text("Flaky flatbreads are served alongside curries or stuffed with flavorful fillings.",
+                      child: Text(description,
                         style:GoogleFonts.inter(
                           textStyle: TextStyle(
                               color: Colors.black,
@@ -352,13 +352,13 @@ class Home extends StatelessWidget {
                           Icon(Icons.chat_bubble_outline),
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
             ),
           ],
-        )
+        ),
       ),
     );
   }
