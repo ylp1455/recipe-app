@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:recipiapp/components/textcomp.dart';
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class Verfication extends StatelessWidget {
+  const Verfication({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class ForgotPassword extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(height: 80,),
-              Text("Forgot Password?",style: TextStyle(
+              Text("Verification",style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontFamily: "Poppins",
                 fontSize: 32,
@@ -37,13 +37,13 @@ class ForgotPassword extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 30,),
-              Text("Enter your Email for the ",style: TextStyle(
+              Text("Enter the verification code we sent to ",style: TextStyle(
                 fontSize: 15,
                 color: Colors.white,
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
               ),),
-              Text("verification process",style: TextStyle(
+              Text("your Email address",style: TextStyle(
                 fontSize: 15,
                 color: Colors.white,
                 fontWeight: FontWeight.w400,
@@ -56,15 +56,38 @@ class ForgotPassword extends StatelessWidget {
                 padding:  EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(color:Color(0xFFDCCDBC), borderRadius: BorderRadius.circular(10)),
                 child: TextField(
-                  keyboardType: TextInputType.emailAddress,
+                  keyboardType:TextInputType.number,
                   textAlignVertical: TextAlignVertical.center,
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: "Enter your Email",
+                    hintText: "Enter OTP",
                     hintStyle: TextStyle(color:Colors.grey),
                     fillColor: Color(0xFFDCCDBC),
                   ),
                 ),
+              ),
+              SizedBox(height: 30,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Didn’t receive the code? ",style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: "Poppins",
+                  ),),
+                  InkWell(
+                    onTap: (){},
+                    child: Text("Resend",style: TextStyle(
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.white,
+                      fontSize: 15,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "Poppins",
+                    ),),
+                  ),
+                ],
               ),
               SizedBox(height: 80,),
               Container(
@@ -77,7 +100,7 @@ class ForgotPassword extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
-                      "Continue",
+                      "Verify",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w600,
