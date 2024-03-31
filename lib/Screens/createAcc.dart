@@ -95,6 +95,7 @@ class _CreateAccounttState extends State<CreateAccountt> {
                             height: 10,
                           ),
                           TextField(
+                            keyboardType: TextInputType.emailAddress,
                             decoration: PrimaryTextComponent(
                                 MyHintText: "Email"),
                           ),
@@ -119,6 +120,7 @@ class _CreateAccounttState extends State<CreateAccountt> {
                       SizedBox(height: 5,),
                       Container(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
@@ -158,30 +160,30 @@ class _CreateAccounttState extends State<CreateAccountt> {
                                 ),
                               ],
                             ),
-                            // Row(
-                            //   mainAxisAlignment:MainAxisAlignment.start ,
-                            //   children: [
-                            //     Padding(
-                            //       padding: const EdgeInsets.only(
-                            //           left: 48),
-                            //       child: RichText(
-                            //         text: TextSpan(
-                            //           children: const <TextSpan>[
-                            //             TextSpan(
-                            //               text: 'Privacy Policy',
-                            //               style: TextStyle(
-                            //                 fontSize: 15,
-                            //                 color: Color(0xFFD77E15),
-                            //                 fontFamily: 'Poppins',
-                            //                 fontWeight: FontWeight.w400,
-                            //               ),
-                            //             ),
-                            //           ],
-                            //         ),
-                            //       ),
-                            //     ),
-                            //   ],
-                            // ),
+                            Row(
+                              mainAxisAlignment:MainAxisAlignment.start ,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 48),
+                                  child: RichText(
+                                    text: TextSpan(
+                                      children: const <TextSpan>[
+                                        TextSpan(
+                                          text: 'Privacy Policy',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            color: Color(0xFFD77E15),
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
