@@ -114,7 +114,7 @@ class RecipiDetails extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 15,
                       ),
                       Expanded(
                         child: Container(
@@ -160,7 +160,7 @@ class RecipiDetails extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 16,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -203,7 +203,7 @@ class RecipiDetails extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 15,
                       ),
                       Expanded(
                         child: Container(
