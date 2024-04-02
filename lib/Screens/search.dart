@@ -13,6 +13,7 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return ScaffoldGradientBackground(
+      bottomNavigationBar: SizedBox(height:70,child: BottomMainNavigationBar()),
       gradient:LinearGradient(
       colors: [
         Color(0xFF444141), // #444141
