@@ -12,7 +12,8 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
-    return ScaffoldGradientBackground(gradient:LinearGradient(
+    return ScaffoldGradientBackground(
+      gradient:LinearGradient(
       colors: [
         Color(0xFF444141), // #444141
         Color(0xFF1D1C1C), // #1D1C1C
