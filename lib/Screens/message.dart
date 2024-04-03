@@ -45,308 +45,310 @@ class _MessageState extends State<Message> {
             ,))
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(25),
-          child: Expanded(
-            child: Column(
-              children: [
-                Container(
-                  height: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFD9D9D9),
+      body: Scrollbar(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(25),
+            child: Expanded(
+              child: Column(
+                children: [
+                  Container(
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFD9D9D9),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              InkWell(
+                                onTap: (){},
+                                  child: Image.asset("images/msgUser.png")),
+                              SizedBox(width: 10,),
+                              Column(
+                               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Ganidu",style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 16,
+                                    color: Colors.black
+                                  ),),
+                                  Text("Seen on Tuesday",style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Poppins",
+                                    color: Color(0xFF000000),
+                                  ),)
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 20,),
+        
+                          //SizedBox(width:100 ,),
+                          InkWell(
+                              onTap:(){},
+                              child: ImageIcon(
+                                AssetImage("images/camera.png"),),),
+                        ],
+                      ),
+                    ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            InkWell(
-                              onTap: (){},
-                                child: Image.asset("images/msgUser.png")),
-                            SizedBox(width: 10,),
-                            Column(
-                             mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Ganidu",style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 16,
-                                  color: Colors.black
-                                ),),
-                                Text("Seen on Tuesday",style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Poppins",
-                                  color: Color(0xFF000000),
-                                ),)
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20,),
-
-                        //SizedBox(width:100 ,),
-                        InkWell(
+                  SizedBox(height: 8,),
+                  Container(
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFD9D9D9),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              InkWell(
+                                  onTap: (){},
+                                  child: Image.asset("images/msgUser.png")),
+                              SizedBox(width: 10,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Ganidu",style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.black
+                                  ),),
+                                  Text("Seen on Tuesday",style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Poppins",
+                                    color: Color(0xFF000000),
+                                  ),)
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 20,),
+        
+                          //SizedBox(width:100 ,),
+                          InkWell(
                             onTap:(){},
                             child: ImageIcon(
                               AssetImage("images/camera.png"),),),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 8,),
-                Container(
-                  height: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFD9D9D9),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            InkWell(
-                                onTap: (){},
-                                child: Image.asset("images/msgUser.png")),
-                            SizedBox(width: 10,),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Ganidu",style: TextStyle(
+                  SizedBox(height: 8,),
+                  Container(
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFD9D9D9),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              InkWell(
+                                  onTap: (){},
+                                  child: Image.asset("images/msgUser.png")),
+                              SizedBox(width: 10,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Ganidu",style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.black
+                                  ),),
+                                  Text("Seen on Tuesday",style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 16,
-                                    color: Colors.black
-                                ),),
-                                Text("Seen on Tuesday",style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Poppins",
-                                  color: Color(0xFF000000),
-                                ),)
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20,),
-
-                        //SizedBox(width:100 ,),
-                        InkWell(
-                          onTap:(){},
-                          child: ImageIcon(
-                            AssetImage("images/camera.png"),),),
-                      ],
+                                    color: Color(0xFF000000),
+                                  ),)
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 20,),
+        
+                          //SizedBox(width:100 ,),
+                          InkWell(
+                            onTap:(){},
+                            child: ImageIcon(
+                              AssetImage("images/camera.png"),),),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 8,),
-                Container(
-                  height: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFD9D9D9),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            InkWell(
-                                onTap: (){},
-                                child: Image.asset("images/msgUser.png")),
-                            SizedBox(width: 10,),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Ganidu",style: TextStyle(
+                  SizedBox(height: 8,),
+                  Container(
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFD9D9D9),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              InkWell(
+                                  onTap: (){},
+                                  child: Image.asset("images/msgUser.png")),
+                              SizedBox(width: 10,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Ganidu",style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.black
+                                  ),),
+                                  Text("Seen on Tuesday",style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 16,
-                                    color: Colors.black
-                                ),),
-                                Text("Seen on Tuesday",style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Poppins",
-                                  color: Color(0xFF000000),
-                                ),)
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20,),
-
-                        //SizedBox(width:100 ,),
-                        InkWell(
-                          onTap:(){},
-                          child: ImageIcon(
-                            AssetImage("images/camera.png"),),),
-                      ],
+                                    color: Color(0xFF000000),
+                                  ),)
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 20,),
+        
+                          //SizedBox(width:100 ,),
+                          InkWell(
+                            onTap:(){},
+                            child: ImageIcon(
+                              AssetImage("images/camera.png"),),),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 8,),
-                Container(
-                  height: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFD9D9D9),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            InkWell(
-                                onTap: (){},
-                                child: Image.asset("images/msgUser.png")),
-                            SizedBox(width: 10,),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Ganidu",style: TextStyle(
+                  SizedBox(height: 8,),
+                  Container(
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFD9D9D9),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              InkWell(
+                                  onTap: (){},
+                                  child: Image.asset("images/msgUser.png")),
+                              SizedBox(width: 10,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Ganidu",style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.black
+                                  ),),
+                                  Text("Seen on Tuesday",style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 16,
-                                    color: Colors.black
-                                ),),
-                                Text("Seen on Tuesday",style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Poppins",
-                                  color: Color(0xFF000000),
-                                ),)
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20,),
-
-                        //SizedBox(width:100 ,),
-                        InkWell(
-                          onTap:(){},
-                          child: ImageIcon(
-                            AssetImage("images/camera.png"),),),
-                      ],
+                                    color: Color(0xFF000000),
+                                  ),)
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 20,),
+        
+                          //SizedBox(width:100 ,),
+                          InkWell(
+                            onTap:(){},
+                            child: ImageIcon(
+                              AssetImage("images/camera.png"),),),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 8,),
-                Container(
-                  height: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFD9D9D9),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            InkWell(
-                                onTap: (){},
-                                child: Image.asset("images/msgUser.png")),
-                            SizedBox(width: 10,),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Ganidu",style: TextStyle(
+                  SizedBox(height: 8,),
+                  Container(
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFD9D9D9),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              InkWell(
+                                  onTap: (){},
+                                  child: Image.asset("images/msgUser.png")),
+                              SizedBox(width: 10,),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Ganidu",style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      color: Colors.black
+                                  ),),
+                                  Text("Seen on Tuesday",style: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 16,
-                                    color: Colors.black
-                                ),),
-                                Text("Seen on Tuesday",style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Poppins",
-                                  color: Color(0xFF000000),
-                                ),)
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20,),
-
-                        //SizedBox(width:100 ,),
-                        InkWell(
-                          onTap:(){},
-                          child: ImageIcon(
-                            AssetImage("images/camera.png"),),),
-                      ],
+                                    color: Color(0xFF000000),
+                                  ),)
+                                ],
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: 20,),
+        
+                          //SizedBox(width:100 ,),
+                          InkWell(
+                            onTap:(){},
+                            child: ImageIcon(
+                              AssetImage("images/camera.png"),),),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 8,),
-                Container(
-                  height: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFD9D9D9),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            InkWell(
-                                onTap: (){},
-                                child: Image.asset("images/msgUser.png")),
-                            SizedBox(width: 10,),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Ganidu",style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 16,
-                                    color: Colors.black
-                                ),),
-                                Text("Seen on Tuesday",style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Poppins",
-                                  color: Color(0xFF000000),
-                                ),)
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 20,),
-
-                        //SizedBox(width:100 ,),
-                        InkWell(
-                          onTap:(){},
-                          child: ImageIcon(
-                            AssetImage("images/camera.png"),),),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          )
+                ],
+              ),
+            )
+          ),
         ),
       ),
     );

@@ -1,5 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:recipiapp/Screens/home.dart';
+import 'package:recipiapp/Screens/message.dart';
+import 'package:recipiapp/Screens/profile.dart';
+import 'package:recipiapp/Screens/search.dart';
+import 'package:recipiapp/Screens/settings.dart';
 
 class BottomMainNavigationBar extends StatelessWidget {
   const BottomMainNavigationBar({
@@ -33,10 +38,17 @@ class BottomMainNavigationBar extends StatelessWidget {
               icon: Container(
                 padding: EdgeInsets.zero,
                 margin: EdgeInsets.zero,
-                child: Image.asset(
-                  "images/Home.png",
-                  width: 40,
-                  height: 40,
+                child: InkWell(
+                  onTap: (){
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+    return Home();
+    }));
+    },
+                  child: Image.asset(
+                    "images/Home.png",
+                    width: 40,
+                    height: 40,
+                  ),
                 ),
               ),
               // size: 10,
@@ -46,22 +58,36 @@ class BottomMainNavigationBar extends StatelessWidget {
               icon: Container(
                 padding: EdgeInsets.zero,
                 margin: EdgeInsets.zero,
-                child: Image.asset(
-                  "images/search.png",
-                  width: 40,
-                  height: 40,
+                child: InkWell(
+                  onTap: (){
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+    return Search();
+    }));
+    },
+                  child: Image.asset(
+                    "images/search.png",
+                    width: 40,
+                    height: 40,
+                  ),
                 ),
               ),
               label: ("Search"),
             ),
             BottomNavigationBarItem(
-              icon: Container(
-                padding: EdgeInsets.all(5),
-                margin: EdgeInsets.zero,
-                child: Image.asset(
-                  "images/chat.png",
-                  width: 40,
-                  height: 40,
+              icon: InkWell(
+                onTap: (){
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+    return Message();
+    }));
+                },
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  margin: EdgeInsets.zero,
+                  child: Image.asset(
+                    "images/chat.png",
+                    width: 40,
+                    height: 40,
+                  ),
                 ),
               ),
               label: ("Chat"),
@@ -70,10 +96,17 @@ class BottomMainNavigationBar extends StatelessWidget {
               icon: Container(
                 padding: EdgeInsets.zero,
                 margin: EdgeInsets.zero,
-                child: Image.asset(
-                  "images/user.png",
-                  width: 40,
-                  height: 40,
+                child: InkWell(
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return Profile();
+                    }));
+                  },
+                  child: Image.asset(
+                    "images/user.png",
+                    width: 40,
+                    height: 40,
+                  ),
                 ),
               ),
               label: ("User"),
@@ -82,10 +115,17 @@ class BottomMainNavigationBar extends StatelessWidget {
               icon: Container(
                 padding: EdgeInsets.zero,
                 margin: EdgeInsets.zero,
-                child: Image.asset(
-                  "images/settings.png",
-                  width: 40,
-                  height: 40,
+                child: InkWell(
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return Settings();
+                    }));
+                  },
+                  child: Image.asset(
+                    "images/settings.png",
+                    width: 40,
+                    height: 40,
+                  ),
                 ),
               ),
               label: ("Settings"),

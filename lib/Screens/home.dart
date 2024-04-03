@@ -75,289 +75,291 @@ class Home extends StatelessWidget {
           ),
         ],
       ),
-      body:Padding(
-        padding: EdgeInsets.all(25),
-        child:ListView(
-          children: [
-            Expanded(
-              flex: 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFD0D0D0),
-                ),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Row(
-                        children: [
-                          InkWell(
-                            onTap: (){
-                              print("profile clicked");
-                            },
-                            child: ImageIcon(
-                              AssetImage("images/user2.png"),
-                              size: 35,
-                              color: Colors.white,
+      body:Scrollbar(
+        child: Padding(
+          padding: EdgeInsets.all(25),
+          child:ListView(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFFD0D0D0),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Row(
+                          children: [
+                            InkWell(
+                              onTap: (){
+                                print("profile clicked");
+                              },
+                              child: ImageIcon(
+                                AssetImage("images/user2.png"),
+                                size: 35,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 3,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(name,style:GoogleFonts.inter(
-                                textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                  fontWeight:FontWeight.w500,
-
+                            SizedBox(width: 3,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(name,style:GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                    fontWeight:FontWeight.w500,
+        
+                                  ),
+                                ) ,
                                 ),
-                              ) ,
-                              ),
-                              Text(subText,style:GoogleFonts.inter(
-                                textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 11,
-                                  fontWeight:FontWeight.w200,
-                                  height: 0.8,
+                                Text(subText,style:GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 11,
+                                    fontWeight:FontWeight.w200,
+                                    height: 0.8,
+                                  ),
+                                ) ,
                                 ),
-                              ) ,
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 0.2,),
-                    Image(image: AssetImage(imgPath)
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 6,
-                        right: 6,
-                        top: 4,
+                      SizedBox(height: 0.2,),
+                      Image(image: AssetImage(imgPath)
                       ),
-                      child: Text(description,
-                        style:GoogleFonts.inter(
-                          textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: 11,
-                              fontWeight:FontWeight.w300
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 6,
+                          right: 6,
+                          top: 4,
+                        ),
+                        child: Text(description,
+                          style:GoogleFonts.inter(
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 11,
+                                fontWeight:FontWeight.w300
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Divider(
-                      color: Colors.black,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 6,
-                        top: 2,
-                        bottom: 6,
+                      Divider(
+                        color: Colors.black,
                       ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.favorite_border),
-                          SizedBox(width: 5,),
-                          Icon(Icons.share_rounded),
-                          SizedBox(width: 5,),
-                          Icon(Icons.chat_bubble_outline),
-                        ],
-                      ),
-                    )
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 6,
+                          top: 2,
+                          bottom: 6,
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.favorite_border),
+                            SizedBox(width: 5,),
+                            Icon(Icons.share_rounded),
+                            SizedBox(width: 5,),
+                            Icon(Icons.chat_bubble_outline),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 15,),
-            Expanded(
-              flex: 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFD0D0D0),
-                ),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Row(
-                        children: [
-                          InkWell(
-                            onTap: (){
-                              print("profile clicked");
-                            },
-                            child: ImageIcon(
-                              AssetImage("images/user2.png"),
-                              size: 35,
-                              color: Colors.white,
+              SizedBox(height: 15,),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFFD0D0D0),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Row(
+                          children: [
+                            InkWell(
+                              onTap: (){
+                                print("profile clicked");
+                              },
+                              child: ImageIcon(
+                                AssetImage("images/user2.png"),
+                                size: 35,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 3,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
-                                textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                  fontWeight:FontWeight.w500,
-
+                            SizedBox(width: 3,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                    fontWeight:FontWeight.w500,
+        
+                                  ),
+                                ) ,
                                 ),
-                              ) ,
-                              ),
-                              Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
-                                textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 11,
-                                  fontWeight:FontWeight.w200,
-                                  height: 0.8,
+                                Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 11,
+                                    fontWeight:FontWeight.w200,
+                                    height: 0.8,
+                                  ),
+                                ) ,
                                 ),
-                              ) ,
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 0.2,),
-                    Image(image: AssetImage("images/containImg.png")
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 6,
-                        right: 6,
-                        top: 4,
+                      SizedBox(height: 0.2,),
+                      Image(image: AssetImage("images/containImg.png")
                       ),
-                      child: Text("Flaky flatbreads are served alongside curries or stuffed with flavorful fillings.",
-                        style:GoogleFonts.inter(
-                          textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: 11,
-                              fontWeight:FontWeight.w300
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 6,
+                          right: 6,
+                          top: 4,
+                        ),
+                        child: Text("Flaky flatbreads are served alongside curries or stuffed with flavorful fillings.",
+                          style:GoogleFonts.inter(
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 11,
+                                fontWeight:FontWeight.w300
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Divider(
-                      color: Colors.black,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 6,
-                        top: 2,
-                        bottom: 6,
+                      Divider(
+                        color: Colors.black,
                       ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.favorite_border),
-                          SizedBox(width: 5,),
-                          Icon(Icons.share_rounded),
-                          SizedBox(width: 5,),
-                          Icon(Icons.chat_bubble_outline),
-                        ],
-                      ),
-                    )
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 6,
+                          top: 2,
+                          bottom: 6,
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.favorite_border),
+                            SizedBox(width: 5,),
+                            Icon(Icons.share_rounded),
+                            SizedBox(width: 5,),
+                            Icon(Icons.chat_bubble_outline),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 15,),
-            Expanded(
-              flex: 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFD0D0D0),
-                ),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: Row(
-                        children: [
-                          InkWell(
-                            onTap: (){
-                              print("profile clicked");
-                            },
-                            child: ImageIcon(
-                              AssetImage("images/user2.png"),
-                              size: 35,
-                              color: Colors.white,
+              SizedBox(height: 15,),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFFD0D0D0),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Row(
+                          children: [
+                            InkWell(
+                              onTap: (){
+                                print("profile clicked");
+                              },
+                              child: ImageIcon(
+                                AssetImage("images/user2.png"),
+                                size: 35,
+                                color: Colors.white,
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 3,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
-                                textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                  fontWeight:FontWeight.w500,
-
+                            SizedBox(width: 3,),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                    fontWeight:FontWeight.w500,
+        
+                                  ),
+                                ) ,
                                 ),
-                              ) ,
-                              ),
-                              Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
-                                textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 11,
-                                  fontWeight:FontWeight.w200,
-                                  height: 0.8,
+                                Text("Sunmanasiri Sarabawan",style:GoogleFonts.inter(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 11,
+                                    fontWeight:FontWeight.w200,
+                                    height: 0.8,
+                                  ),
+                                ) ,
                                 ),
-                              ) ,
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 0.2,),
-                    Image(image: AssetImage("images/containImg.png")
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 6,
-                        right: 6,
-                        top: 4,
+                      SizedBox(height: 0.2,),
+                      Image(image: AssetImage("images/containImg.png")
                       ),
-                      child: Text("Flaky flatbreads are served alongside curries or stuffed with flavorful fillings.",
-                        style:GoogleFonts.inter(
-                          textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: 11,
-                              fontWeight:FontWeight.w300
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 6,
+                          right: 6,
+                          top: 4,
+                        ),
+                        child: Text("Flaky flatbreads are served alongside curries or stuffed with flavorful fillings.",
+                          style:GoogleFonts.inter(
+                            textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 11,
+                                fontWeight:FontWeight.w300
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Divider(
-                      color: Colors.black,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 6,
-                        top: 2,
-                        bottom: 6,
+                      Divider(
+                        color: Colors.black,
                       ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.favorite_border),
-                          SizedBox(width: 5,),
-                          Icon(Icons.share_rounded),
-                          SizedBox(width: 5,),
-                          Icon(Icons.chat_bubble_outline),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 6,
+                          top: 2,
+                          bottom: 6,
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.favorite_border),
+                            SizedBox(width: 5,),
+                            Icon(Icons.share_rounded),
+                            SizedBox(width: 5,),
+                            Icon(Icons.chat_bubble_outline),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
