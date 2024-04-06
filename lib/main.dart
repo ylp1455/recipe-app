@@ -10,12 +10,18 @@ import 'package:recipiapp/Screens/recipiDetails.dart';
 import 'package:recipiapp/Screens/register.dart';
 import 'package:recipiapp/Screens/search.dart';
 import 'package:recipiapp/Screens/settings.dart';
+import 'package:recipiapp/Screens/splash.dart';
 import 'package:recipiapp/Screens/verification.dart';
 import 'package:recipiapp/Screens/welcome.dart';
+import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home:Profile(),
+    home:FlutterSplashScreen(
+      duration: Duration(milliseconds: 2000),
+      nextScreen: Home(),
+      splashScreenBody:SplashScreen(),
+    ),
   ));
 }

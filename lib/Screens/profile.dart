@@ -98,7 +98,7 @@ class _ProfileState extends State<Profile> {
                                      ),),
                                   style: ButtonStyle(
                                       backgroundColor: MaterialStatePropertyAll(
-                                        Color.fromRGBO(0, 135, 255, 0.7),s
+                                        Color.fromRGBO(0, 135, 255, 0.7),
                                       ),
                                   ),
                                   ),
