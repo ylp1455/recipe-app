@@ -1,16 +1,4 @@
 # recipiapp
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### **Sign up Screens**
+![Sign Up edited](https://github.com/sajitha00/recipiapp/assets/115799454/ce750578-baa6-49ae-a0fd-ccc3fbb02b33)
