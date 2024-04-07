@@ -6,8 +6,8 @@
 ### **Login Screen**
 ![Sign In edited](https://github.com/sajitha00/recipiapp/assets/115799454/1640aa33-7fb1-4bfd-ab73-c59eb60922a6)
 
-### ** Register Sign in Screen**
-![Register   Sign In edited](https://github.com/sajitha00/recipiapp/assets/115799454/03985049-65be-4d3a-b323-ea1c74fe9ad7)
+### **Register Sign in Screen**
+![Register Sign In edited](https://github.com/sajitha00/recipiapp/assets/115799454/03985049-65be-4d3a-b323-ea1c74fe9ad7)
 
 ### **Home Screen**
 ![Foodeigram](https://github.com/sajitha00/recipiapp/assets/115799454/e651958c-dcdb-4e15-9fc1-860fda028111)
