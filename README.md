@@ -1,7 +1,7 @@
 # recipiapp
 
 ### **Sign up Screen**
-![Sign Up edited](https://github.com/sajitha00/recipiapp/assets/115799454/ce750578-baa6-49ae-a0fd-ccc3fbb02b33)\
+![Sign Up edited](https://github.com/sajitha00/recipiapp/assets/115799454/ce750578-baa6-49ae-a0fd-ccc3fbb02b33)
 
 ### **Login Screen**
 ![Sign In edited](https://github.com/sajitha00/recipiapp/assets/115799454/1640aa33-7fb1-4bfd-ab73-c59eb60922a6)
