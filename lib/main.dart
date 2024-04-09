@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart'; // Import the generated configuration file
+
 import 'package:recipiapp/Screens/createAcc.dart';
 import 'package:recipiapp/Screens/createNewPassword.dart';
 import 'package:recipiapp/Screens/food.dart';
@@ -15,11 +18,13 @@ import 'package:recipiapp/Screens/verification.dart';
 import 'package:recipiapp/Screens/welcome.dart';
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: FlutterSplashScreen(
-      duration: Duration(milliseconds: 2000),
+      duration: Duration(milliseconds: 2),
       nextScreen: Register(),
       splashScreenBody: SplashScreen(),
     ),
