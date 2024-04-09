@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:recipiapp/components/textcomp.dart';
+import 'package:recipiapp/backend/auth_service.dart';
 
 class CreateAccountt extends StatefulWidget {
   const CreateAccountt({super.key});
@@ -13,6 +14,9 @@ class CreateAccountt extends StatefulWidget {
 class _CreateAccounttState extends State<CreateAccountt> {
   late bool _passwordVisible;
   bool? isChecked = true;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
 
   void initState() {
     _passwordVisible = false;
@@ -25,7 +29,7 @@ class _CreateAccounttState extends State<CreateAccountt> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      resizeToAvoidBottomInset : false,
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
@@ -88,24 +92,28 @@ class _CreateAccounttState extends State<CreateAccountt> {
                       Container(
                         child: Column(children: [
                           TextField(
-                            decoration: PrimaryTextComponent(
-                                MyHintText: "Name"),
+                            controller:
+                                _nameController, // Use the new controller for name
+                            decoration:
+                                PrimaryTextComponent(MyHintText: "Name"),
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           TextField(
+                            controller: _emailController,
                             keyboardType: TextInputType.emailAddress,
-                            decoration: PrimaryTextComponent(
-                                MyHintText: "Email"),
+                            decoration:
+                                PrimaryTextComponent(MyHintText: "Email"),
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           TextField(
+                            controller: _passwordController,
                             obscureText: !_passwordVisible,
-                            decoration: PrimaryTextComponent(
-                                MyHintText: "Password"),
+                            decoration:
+                                PrimaryTextComponent(MyHintText: "Password"),
                           ),
                           SizedBox(
                             height: 10,
@@ -117,7 +125,9 @@ class _CreateAccounttState extends State<CreateAccountt> {
                           ),
                         ]),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Container(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,11 +171,10 @@ class _CreateAccounttState extends State<CreateAccountt> {
                               ],
                             ),
                             Row(
-                              mainAxisAlignment:MainAxisAlignment.start ,
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 48),
+                                  padding: const EdgeInsets.only(left: 48),
                                   child: RichText(
                                     text: TextSpan(
                                       children: const <TextSpan>[
@@ -187,7 +196,9 @@ class _CreateAccounttState extends State<CreateAccountt> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 15,),
+                      SizedBox(
+                        height: 15,
+                      ),
                       Column(
                         children: [
                           Container(
@@ -198,7 +209,31 @@ class _CreateAccounttState extends State<CreateAccountt> {
                                 color: Color(0xFFD77E15)),
                             child: Center(
                               child: TextButton(
-                                onPressed: () {},
+                                onPressed: () async {
+                                  String result =
+                                      await AuthService().registerUser(
+                                    _emailController.text,
+                                    _passwordController.text,
+                                    _nameController.text, // Pass the name here
+                                  );
+                                  if (result == "Registration Successful") {
+                                    // Navigate to the next screen or show a success message
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content:
+                                            Text("Registration Successful"),
+                                      ),
+                                    );
+                                  } else {
+                                    // Show an error message
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                            "Registration Failed: $result"),
+                                      ),
+                                    );
+                                  }
+                                },
                                 child: Text(
                                   "Create Account",
                                   style: TextStyle(
