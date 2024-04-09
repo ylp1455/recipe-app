@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:recipiapp/Screens/welcome.dart';
+import 'package:recipiapp/Screens/createAcc.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
@@ -14,12 +16,10 @@ class Register extends StatelessWidget {
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/Regimg.png'),
-                  fit: BoxFit.cover,
-                  //alignment: Alignment(0, 1.2),
-                  scale: 2
-
-                ),
+                    image: AssetImage('images/Regimg.png'),
+                    fit: BoxFit.cover,
+                    //alignment: Alignment(0, 1.2),
+                    scale: 2),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -49,11 +49,11 @@ class Register extends StatelessWidget {
                                 children: [
                                   Text(
                                     "Make your own food,",
-                                    style:TextStyle(
-                                      fontFamily:'Poppins',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
                                       fontSize: 29,
                                       fontWeight: FontWeight.w500,
-                                      color:Color(0xFFD77E15),
+                                      color: Color(0xFFD77E15),
                                     ),
                                   ),
                                 ],
@@ -64,9 +64,9 @@ class Register extends StatelessWidget {
                                     "Stay at home",
                                     style: TextStyle(
                                       fontSize: 33,
-                                      color:Color(0xFFD77E15),
+                                      color: Color(0xFFD77E15),
                                       fontWeight: FontWeight.bold,
-                                      fontFamily:'Poppins',
+                                      fontFamily: 'Poppins',
                                     ),
                                     //style: SecondaryTextGrayStyle(),
                                   ),
@@ -80,19 +80,25 @@ class Register extends StatelessWidget {
                                 width: 179,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Color(0xFFD77E15)
-                                ),
-                                child:Center(child: TextButton(
-                                  onPressed: (){},
-                                  child: Text("Register",style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.white,
-                                    fontFamily:'Poppins',
-                                    fontWeight: FontWeight.w600
+                                    color: Color(0xFFD77E15)),
+                                child: Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  CreateAccountt()));
+                                    },
+                                    child: Text(
+                                      "Register",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.white,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w600),
+                                    ),
                                   ),
-                                  ),
                                 ),
-                                ) ,
                               ),
                               SizedBox(
                                 height: 20,
@@ -102,22 +108,28 @@ class Register extends StatelessWidget {
                                 width: 179,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Color(0xFFFFFFFF)
-                                ),
-                                child:Center(child: TextButton(
-                                  onPressed: (){},
-                                  child: Text("Sign in",style: TextStyle(
-                                    fontSize: 20,
-                                    color: Color(0xFFD77E15),
-                                    fontFamily:'Poppins',
-                                      fontWeight: FontWeight.w600,
+                                    color: Color(0xFFFFFFFF)),
+                                child: Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: (context) => Welcome()));
+                                    },
+                                    child: Text(
+                                      "Sign in",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Color(0xFFD77E15),
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
                                   ),
-                                  ),
                                 ),
-                                ) ,
                               ),
                               SizedBox(
-                                height:50,
+                                height: 50,
                               ),
                             ],
                           )

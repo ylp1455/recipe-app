@@ -18,10 +18,10 @@ import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home:FlutterSplashScreen(
+    home: FlutterSplashScreen(
       duration: Duration(milliseconds: 2000),
-      nextScreen: Home(),
-      splashScreenBody:SplashScreen(),
+      nextScreen: Register(),
+      splashScreenBody: SplashScreen(),
     ),
   ));
 }
