@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recipiapp/Screens/createPost.dart';
 import 'package:recipiapp/components/bottomNavigation.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'dart:math' as math;
@@ -40,17 +41,19 @@ class Home extends StatelessWidget {
         ),
         actions: [
           Transform.scale(
-            scale: 1.2,
-            child:InkWell(
-              onTap: (){},
-              child: ImageIcon(
-                AssetImage("images/box.png"),
-                color: Color(0xFFFFFFFF),
-              ),
+            scale: 1.5,
+            child: IconButton(
+              onPressed:(){
+                Navigator.push(context,MaterialPageRoute(builder:(_){
+                  return CreatePost();
+                }));
+              },
+              icon:Icon(Icons.add_a_photo_outlined),
+              color: Colors.white,
             ),
           ),
           SizedBox(
-            width: 18,
+            width: 8,
           ),
           Transform.scale(
             scale: 1.2,

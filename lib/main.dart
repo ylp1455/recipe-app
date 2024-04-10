@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart'; // Import the generated configuration file
-
 import 'package:recipiapp/Screens/createAcc.dart';
 import 'package:recipiapp/Screens/createNewPassword.dart';
 import 'package:recipiapp/Screens/food.dart';
@@ -25,8 +24,8 @@ void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: FlutterSplashScreen(
-      duration: Duration(milliseconds: 2),
-      nextScreen: CreatePost(),
+      duration: Duration(milliseconds: 200),
+      nextScreen: Home(),
       splashScreenBody: SplashScreen(),
     ),
   ));

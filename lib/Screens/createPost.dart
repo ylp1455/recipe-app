@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
+import 'package:recipiapp/components/bottomNavigation.dart';
 
 class CreatePost extends StatefulWidget {
   const CreatePost({Key? key}) : super(key: key);
@@ -68,34 +70,82 @@ class _CreatePostState extends State<CreatePost> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Create Post'),
-      ),
-      body: Column(
-        children: <Widget>[
-          _image == null
-              ? const Text('No image selected.')
-              : Image.file(_image!),
-          TextField(
-            onChanged: (value) {
-              setState(() {
-                _caption = value;
-              });
-            },
-            decoration: const InputDecoration(
-              labelText: 'Caption',
-            ),
-          ),
-          ElevatedButton(
-            onPressed: getImage,
-            child: const Text('Select Image'),
-          ),
-          ElevatedButton(
-            onPressed: uploadImage,
-            child: const Text('Upload Post'),
-          ),
+    return ScaffoldGradientBackground(
+      bottomNavigationBar: SizedBox(height:70,child: BottomMainNavigationBar()),
+      gradient:LinearGradient(
+        colors: [
+          Color(0xFF444141), // #444141
+          Color(0xFF1D1C1C), // #1D1C1C
         ],
+        begin: Alignment.bottomCenter,
+        end: Alignment.topCenter,
+      ),
+      appBar: AppBar(
+        toolbarHeight: 76,
+        backgroundColor:Color(0xFFD77E15),
+        title: Text(
+          "Create Post",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 24,
+            fontFamily: 'Poppins',
+            color: Color(0xFFFFFFFF),
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 20,),
+              _image == null
+                  ? const Text('No image selected.',style: TextStyle(
+                fontSize: 14,
+                fontFamily: "Poppins",
+                color: Colors.white
+              ),)
+                  : Image.file(_image!),
+              TextField(
+                onChanged: (value) {
+                  setState(() {
+                    _caption = value;
+                  });
+                },
+                decoration: const InputDecoration(
+                  labelText: 'Enter Caption',
+                  labelStyle: TextStyle(
+                    color: Colors.white38,
+                  )
+                ),
+              ),
+              SizedBox(height: 15,),
+              ElevatedButton(
+                onPressed: getImage,
+                child: const Text('Select Image',style: TextStyle(
+                  fontFamily: "Poppins",
+                  color: Color(0xFFFFFFFF),
+                  fontWeight: FontWeight.w600,
+                ),),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFD77E15)
+                ),
+              ),
+              SizedBox(height: 5,),
+              ElevatedButton(
+                onPressed: uploadImage,
+                child: const Text('Upload Post',style: TextStyle(
+                  fontFamily: "Poppins",
+                  color: Color(0xFFFFFFFF),
+                  fontWeight:FontWeight.w600,
+                ),),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFFD77E15)
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
