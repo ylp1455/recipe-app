@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:recipiapp/components/textcomp.dart';
+import 'package:recipiapp/backend/auth_service.dart';
+import 'package:recipiapp/Screens/home.dart';
+
+final TextEditingController _emailController = TextEditingController();
+final TextEditingController _passwordController = TextEditingController();
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -23,7 +28,7 @@ class _WelcomeScreenState extends State<Welcome> {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height ,
+              height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('images/Regimg.png'),
@@ -88,19 +93,17 @@ class _WelcomeScreenState extends State<Welcome> {
                               ),
                               Column(
                                 children: [
-                                 TextField(
-                                   decoration: PrimaryTextComponent(
-                                     MyHintText: "Email"
-                                   ),
-                                 ),
+                                  TextField(
+                                    decoration: PrimaryTextComponent(
+                                        MyHintText: "Email"),
+                                  ),
                                   SizedBox(
                                     height: 10,
                                   ),
                                   TextField(
                                     obscureText: !_passwordVisible,
                                     decoration: PrimaryTextComponent(
-                                        MyHintText: "Password"
-                                    ),
+                                        MyHintText: "Password"),
                                   ),
                                   SizedBox(
                                     height: 15,
@@ -128,7 +131,41 @@ class _WelcomeScreenState extends State<Welcome> {
                                         color: Color(0xFFD77E15)),
                                     child: Center(
                                       child: TextButton(
-                                        onPressed: () {},
+                                        onPressed: () async {
+                                          String result =
+                                              await AuthService().loginUser(
+                                            _emailController.text,
+                                            _passwordController.text,
+                                          );
+                                          if (result == "Login Successful") {
+                                            // Navigate to the Home screen
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) => Home()),
+                                            );
+                                          } else {
+                                            // Show a dialog for failed login
+                                            showDialog(
+                                              context: context,
+                                              builder: (BuildContext context) {
+                                                return AlertDialog(
+                                                  title: Text('Login Failed'),
+                                                  content: Text("$result"),
+                                                  actions: <Widget>[
+                                                    TextButton(
+                                                      child: Text('OK'),
+                                                      onPressed: () {
+                                                        Navigator.of(context)
+                                                            .pop(); // Close the dialog
+                                                      },
+                                                    ),
+                                                  ],
+                                                );
+                                              },
+                                            );
+                                          }
+                                        },
                                         child: Text(
                                           "Sign In",
                                           style: TextStyle(

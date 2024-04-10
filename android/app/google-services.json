@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "974963534306",
+    "project_id": "flashchat-db52e",
+    "storage_bucket": "flashchat-db52e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974963534306:android:9858969cab6440950471bb",
+        "android_client_info": {
+          "package_name": "com.example.recipiapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiAwsQvlfxdK15XjNH9cV-Ezks5PkU3i8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

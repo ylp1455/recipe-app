@@ -41,7 +41,12 @@ dependencies:
   flutter_svg: ^2.0.10+1
   easy_search_bar: ^2.5.0
   another_flutter_splash_screen: ^1.2.0
-
+  firebase_auth: ^4.19.1
+  firebase_core: ^2.29.0
+  cloud_firestore: ^4.16.1
+  image_picker: ^1.0.7
+  firebase_storage: ^11.7.1
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
