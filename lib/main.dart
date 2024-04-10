@@ -16,6 +16,7 @@ import 'package:recipiapp/Screens/settings.dart';
 import 'package:recipiapp/Screens/splash.dart';
 import 'package:recipiapp/Screens/verification.dart';
 import 'package:recipiapp/Screens/welcome.dart';
+import 'package:recipiapp/Screens/createPost.dart';
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 
 void main() async {
@@ -25,7 +26,7 @@ void main() async {
     debugShowCheckedModeBanner: false,
     home: FlutterSplashScreen(
       duration: Duration(milliseconds: 2),
-      nextScreen: Register(),
+      nextScreen: CreatePost(),
       splashScreenBody: SplashScreen(),
     ),
   ));

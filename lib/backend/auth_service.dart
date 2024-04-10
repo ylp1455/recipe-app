@@ -12,11 +12,20 @@ class AuthService {
           email: email, password: password);
       await _firestore.collection('users').doc(result.user!.uid).set({
         'email': email,
-        'password': password, // Storing the password in Firestore
-        'name': name, // Storing the user's name in Firestore
-        // Add other user info if needed
+        'password': password,
+        'name': name,
       });
       return "Registration Successful";
+    } catch (e) {
+      return e.toString();
+    }
+  }
+
+  Future<String> loginUser(String email, String password) async {
+    try {
+      UserCredential result = await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      return "Login Successful";
     } catch (e) {
       return e.toString();
     }
