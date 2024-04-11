@@ -24,8 +24,8 @@ void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: FlutterSplashScreen(
-      duration: Duration(milliseconds: 200),
-      nextScreen: Home(),
+      duration: Duration(milliseconds: 2),
+      nextScreen: Register(),
       splashScreenBody: SplashScreen(),
     ),
   ));

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:recipiapp/components/textcomp.dart';
+import 'package:recipiapp/Screens/home.dart';
 import 'package:recipiapp/backend/auth_service.dart';
 
 class CreateAccountt extends StatefulWidget {
@@ -264,15 +265,45 @@ class _CreateAccounttState extends State<CreateAccountt> {
                                         image: AssetImage("images/google.png")),
                                   ),
                                   TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      "Sign Up with Google",
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.white,
-                                        fontFamily: 'Poppins',
-                                      ),
+                                    onPressed: () async {
+                                      String result = await AuthService()
+                                          .signInWithGoogle();
+                                      if (result == "Sign in successful") {
+                                        // Navigate to the Home screen
+                                        Navigator.of(context).pushReplacement(
+                                          MaterialPageRoute(
+                                              builder: (context) => Home()),
+                                        );
+                                      } else {
+                                        // Show an error message
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content:
+                                                Text("Sign in failed: $result"),
+                                          ),
+                                        );
+                                      }
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsets.only(top: 5, left: 20),
+                                          child: Image(
+                                              image: AssetImage(
+                                                  "images/google.png")),
+                                        ),
+                                        Text(
+                                          "Sign Up with Google",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.white,
+                                            fontFamily: 'Poppins',
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ],

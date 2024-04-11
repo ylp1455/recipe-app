@@ -71,8 +71,9 @@ class _CreatePostState extends State<CreatePost> {
   @override
   Widget build(BuildContext context) {
     return ScaffoldGradientBackground(
-      bottomNavigationBar: SizedBox(height:70,child: BottomMainNavigationBar()),
-      gradient:LinearGradient(
+      bottomNavigationBar:
+          SizedBox(height: 70, child: BottomMainNavigationBar()),
+      gradient: LinearGradient(
         colors: [
           Color(0xFF444141), // #444141
           Color(0xFF1D1C1C), // #1D1C1C
@@ -82,7 +83,7 @@ class _CreatePostState extends State<CreatePost> {
       ),
       appBar: AppBar(
         toolbarHeight: 76,
-        backgroundColor:Color(0xFFD77E15),
+        backgroundColor: Color(0xFFD77E15),
         title: Text(
           "Create Post",
           style: TextStyle(
@@ -98,13 +99,17 @@ class _CreatePostState extends State<CreatePost> {
           padding: const EdgeInsets.all(25.0),
           child: Column(
             children: <Widget>[
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               _image == null
-                  ? const Text('No image selected.',style: TextStyle(
-                fontSize: 14,
-                fontFamily: "Poppins",
-                color: Colors.white
-              ),)
+                  ? const Text(
+                      'No image selected.',
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: "Poppins",
+                          color: Colors.white),
+                    )
                   : Image.file(_image!),
               TextField(
                 onChanged: (value) {
@@ -113,35 +118,42 @@ class _CreatePostState extends State<CreatePost> {
                   });
                 },
                 decoration: const InputDecoration(
-                  labelText: 'Enter Caption',
-                  labelStyle: TextStyle(
-                    color: Colors.white38,
-                  )
-                ),
+                    labelText: 'Enter Caption',
+                    labelStyle: TextStyle(
+                      color: Colors.white38,
+                    )),
               ),
-              SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
               ElevatedButton(
                 onPressed: getImage,
-                child: const Text('Select Image',style: TextStyle(
-                  fontFamily: "Poppins",
-                  color: Color(0xFFFFFFFF),
-                  fontWeight: FontWeight.w600,
-                ),),
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFD77E15)
+                child: const Text(
+                  'Select Image',
+                  style: TextStyle(
+                    fontFamily: "Poppins",
+                    color: Color(0xFFFFFFFF),
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFD77E15)),
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               ElevatedButton(
                 onPressed: uploadImage,
-                child: const Text('Upload Post',style: TextStyle(
-                  fontFamily: "Poppins",
-                  color: Color(0xFFFFFFFF),
-                  fontWeight:FontWeight.w600,
-                ),),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFD77E15)
+                child: const Text(
+                  'Upload Post',
+                  style: TextStyle(
+                    fontFamily: "Poppins",
+                    color: Color(0xFFFFFFFF),
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFFD77E15)),
               ),
             ],
           ),
