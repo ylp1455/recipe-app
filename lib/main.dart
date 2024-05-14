@@ -25,7 +25,7 @@ void main() async {
     debugShowCheckedModeBanner: false,
     home: FlutterSplashScreen(
       duration: Duration(milliseconds: 2),
-      nextScreen: Register(),
+      nextScreen: Welcome(),
       splashScreenBody: SplashScreen(),
     ),
   ));

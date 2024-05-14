@@ -23,15 +23,15 @@ class AuthService {
     }
   }
 
-  Future<String> loginUser(String email, String password) async {
-    try {
-      UserCredential result = await _auth.signInWithEmailAndPassword(
-          email: email, password: password);
-      return "Login Successful";
-    } catch (e) {
-      return e.toString();
-    }
-  }
+  // Future<String> loginUser(String email, String password) async {
+  //   try {
+  //     UserCredential result = await _auth.signInWithEmailAndPassword(
+  //         email: email, password: password);
+  //     return "Login Successful";
+  //   } catch (e) {
+  //     return e.toString();
+  //   }
+  // }
 
   // Method for Google Sign-In
   Future<String> signInWithGoogle() async {
@@ -54,6 +54,16 @@ class AuthService {
       } else {
         return "Failed to sign in";
       }
+    } catch (e) {
+      return e.toString();
+    }
+  }
+
+  Future<String> loginUser(String email, String password) async {
+    try {
+      UserCredential result = await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      return "Login Successful";
     } catch (e) {
       return e.toString();
     }

@@ -290,9 +290,6 @@ class _CreateAccounttState extends State<CreateAccountt> {
                                         Padding(
                                           padding:
                                               EdgeInsets.only(top: 5, left: 20),
-                                          child: Image(
-                                              image: AssetImage(
-                                                  "images/google.png")),
                                         ),
                                         Text(
                                           "Sign Up with Google",

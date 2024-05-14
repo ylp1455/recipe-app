@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recipiapp/components/textcomp.dart';
 import 'package:recipiapp/backend/auth_service.dart';
 import 'package:recipiapp/Screens/home.dart';
+import 'package:recipiapp/Screens/createAcc.dart';
 
 final TextEditingController _emailController = TextEditingController();
 final TextEditingController _passwordController = TextEditingController();
@@ -195,7 +196,12 @@ class _WelcomeScreenState extends State<Welcome> {
                                       ),
                                       InkWell(
                                         onTap: () {
-                                          print("signup pressed");
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    CreateAccountt()),
+                                          );
                                         },
                                         child: Text(
                                           " Sign Up",
